@@ -1,6 +1,7 @@
 # Suppliers in Novosibirsk
 
 Static site is [here](https://bdynamite.github.io/22_proto_markup/)
+
 Site was generate from templates with Jinja2
 
 # How to launch generator
