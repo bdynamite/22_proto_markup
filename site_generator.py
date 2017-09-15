@@ -8,7 +8,8 @@ def load_jinja_templates(dir_path):
                             trim_blocks=True,
                             lstrip_blocks=True)
     with os.scandir(dir_path) as dir_iterator:
-        return {file.name: jinja_env.get_template(file.name) for file in dir_iterator if file.is_file()}
+        return {html_template.name: jinja_env.get_template(html_template.name)
+                for html_template in dir_iterator if html_template.is_file()}
 
 
 def render_page(jinja_template, file_name):
