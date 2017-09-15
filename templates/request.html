@@ -1,0 +1,23 @@
+{% macro request(number_of_requests) -%}
+{% for i in range(number_of_requests) %}
+<div class="container">
+    <div class="requests">
+      <div class="col-sm-12">
+        <hr>
+        <div class="row">
+          <div class="col-sm-6">
+            Вчера, в 12:30
+          </div>
+          <div class="col-sm-6 text-right">
+            ★ в закладки
+          </div>
+        </div>
+        <p>60шт. ПК от 72-15 до ПК 21-15,Криводановка, с доставкой.</p>
+        <p>Алексей</p>
+        <button type="submit" class="btn btn-default">Показать телефон</button>
+        <span class="text-muted">12 просмотров</span>
+      </div>
+    </div>
+</div>
+{% endfor %}
+{%- endmacro %}

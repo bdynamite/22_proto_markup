@@ -1,0 +1,50 @@
+{% from 'navbar.html' import navbar %}
+{% from 'request.html' import request %}
+{% from 'footer.html' import footer %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заявки</title>
+  <link href="styles\bootstrap.min.css" rel="stylesheet">
+  <link href="styles\my_styles.css" rel="stylesheet">
+</head>
+<body>
+  {{ navbar() }}
+  <div class="container">
+    <h1>
+      Заявки
+    </h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-xs-6">
+        Раздел: <a href="#">Все <span class="caret"></span></a>
+      </div>
+      <div class="col-sm-6 col-xs-6 text-right">
+        регион: <a href="#">Новосибирск и область <span class="caret"></span></a>
+      </div>
+    </div>
+  </div>
+  {{ request(8) }}
+  <div class="container">
+    <hr>
+    <div class="text-center all_requests">
+      <a href="#" class="btn btn-default">Показать еще</a>
+    </div>
+  </div>
+  <div class="container text-center">
+    <ul class="pagination">
+      <li><a href="#"><</a> </li>
+      <li class="active"><a href="#">1</a> </li>
+      <li><a href="#">2</a> </li>
+      <li><a href="#">3</a> </li>
+      <li><a href="#">...10</a> </li>
+      <li><a href="#">></a> </li>
+    </ul>
+  </div>
+  {{ footer() }}
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js\bootstrap.min.js"></script>
+</body>
+</html>

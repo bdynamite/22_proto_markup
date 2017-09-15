@@ -1,0 +1,141 @@
+{% from 'navbar.html' import navbar %}
+{% from 'request.html' import request %}
+{% from 'item.html' import items %}
+{% from 'footer.html' import footer %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Поставщики Новосибирска</title>
+  <link href="styles\bootstrap.min.css" rel="stylesheet">
+  <link href="styles\my_styles.css" rel="stylesheet">
+</head>
+<body>
+  {{ navbar() }}
+  <div class="container-fluid text-center">
+    <h5>
+      Участники в Новосибирске:  <a href="#">105 оптовых компаний</a>   <a href="#">25 производителей</a>
+    </h5>
+  </div>
+  <div class="container-fluid text-center">
+    <h2>
+      Вам позвонят лучшие поставщики Новосибирска
+    </h2>
+  </div>
+  <div class="container">
+    <form class="form-horizontal well">
+      <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-1">
+          <h4>Я ищу:</h4>
+        </div>
+        <div class="col-sm-10 col-sm-offset-2">
+          <label>
+            <input type="checkbox" value>ЖБИ (фундаментальные блоки ФБСб плиты перекрытий ПК, перемычки)
+          </label>
+        </div>
+        <div class="col-sm-10 col-sm-offset-2">
+          <label>
+            <input type="checkbox" value>Кирпич / Газобетон / Брус
+          </label>
+        </div>
+        <div class="col-sm-10 col-sm-offset-2">
+          <label>
+            <input type="checkbox" value>Бетон / Раствор
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10 col-sm-offset-2">
+          <a href="#">в Новосибирске и области <span class="caret"></span></a>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 text-right" for="desc">
+          Описание *
+        </label>
+        <div class="col-sm-10">
+          <textarea class="form-control" rows="2" id="desc"></textarea>
+          <p class="text-muted">Пример: нужно фбс 24.4.6 50шт плиты пк 20 ПК 60-20-12 доставка в Новолуговое</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone" class="col-sm-2 text-right control-label">
+          Телефон *
+        </label>
+        <div class="col-sm-4">
+          <input type="tel" id="phone" class="form-control">
+        </div>
+        <label for="name" class="col-sm-2 text-right control-label">
+          Имя
+        </label>
+        <div class="col-sm-4">
+          <input type="text" id="name" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="text-center">
+          <button type="submit" class="btn btn-default">Опубликовать заявку</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container">
+    <h2 class="text-center">Свежие заявки</h2>
+    <div class="row">
+      <div class="col-sm-6 col-xs-6">
+        Раздел: <a href="#">Все <span class="caret"></span></a>
+      </div>
+      <div class="col-sm-6 col-xs-6 text-right">
+        регион: <a href="#">Новосибирск и область <span class="caret"></span></a>
+      </div>
+    </div>
+  </div>
+  {{ request(4) }}
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container all_requests">
+    <div class="text-center">
+      <a href="requests.html" class="btn btn-default">Посмотреть все заявки</a>
+    </div>
+  </div>
+  <div class="container all_requests">
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-2">
+        <div id="Carousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="item active">
+              <div class="col-sm-11 col-sm-offset-1 col-xs-10 col-xs-offset-2">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="img\img_avatar1.png" class="media-object">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Кирилл, 29 лет, г. Барабинск</h4>
+                    <p>Бла-бла, мне все помогло, все супер! Бла-бла, мне все помогло, все супер! Бла-бла, мне все помогло, все супер! Бла-бла, мне все помогло, все супер!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {{ items(2) }}
+          </div>
+          <a class="left carousel-control" href="#Carousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#Carousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="text-center">
+          <button type="submit" class="btn btn-default">Оставить отзыв</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ footer() }}
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js\bootstrap.min.js"></script>
+</body>
+</html>

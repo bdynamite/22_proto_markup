@@ -1,0 +1,17 @@
+{% macro items(quantity) -%}
+{% for i in range(quantity) %}
+<div class="item">
+              <div class="col-sm-11 col-sm-offset-1 col-xs-10 col-xs-offset-2">
+                <div class="media">
+                  <div class="media-left">
+                    <img src="img\img_avatar1.png" class="media-object">
+                  </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Кирилл, 29 лет, г. Барабинск</h4>
+                    <p>Бла-бла, мне все помогло, все супер! Бла-бла, мне все помогло, все супер! Бла-бла, мне все помогло, все супер! Бла-бла, мне все помогло, все супер!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+{% endfor %}
+{%- endmacro %}

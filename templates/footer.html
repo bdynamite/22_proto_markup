@@ -1,0 +1,54 @@
+{% macro footer() -%}
+<div class="jumbotron my_footer">
+    <h3 class="text-center">Вы поставщик?</h3>
+    <div class="container">
+      <div class="raw">
+        <div class="col-sm-6">
+          <p class="small">Для доступа к телефонам покупателей заполните форму или позвоните нам
+          +7 999 888-77-66</p>
+          <p>Текст с дополнительной информацией по условиям сотрудничества.
+          Возможно стоит вынести его на отдельную страницу.</p>
+        </div>
+        <form class="form-horizontal col-sm-6">
+          <div class="form-group">
+            <label for="org" class="col-sm-3 control-label text-right">
+              Организация
+            </label>
+            <div class="col-sm-9">
+              <input type="text" id="org" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="tel_foot" class="col-sm-3 control-label text-right">
+              Телефон
+            </label>
+            <div class="col-sm-9">
+              <input type="text" id="tel_foot" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email" class="col-sm-3 control-label text-right">
+              Email
+            </label>
+            <div class="col-sm-9">
+              <input type="text" id="email" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name_foot" class="col-sm-3 control-label text-right">
+              Имя
+            </label>
+            <div class="col-sm-9">
+              <input type="text" id="name_foot" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-9 col-sm-offset-3">
+              <button type="submit" class="btn btn-default">Отправить информацию</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{%- endmacro %}
