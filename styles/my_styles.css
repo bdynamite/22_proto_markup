@@ -9,3 +9,9 @@
 body {
   padding-top: 65px;
 }
+
+@media (min-width: 768px) {
+  .text-sm-right{
+    text-align: right;
+  }
+}
